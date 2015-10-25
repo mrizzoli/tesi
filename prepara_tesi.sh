@@ -12,16 +12,30 @@ set -x  # Verbosity all the way
 ##git clone https://mrizzoli@bitbucket.org/mrizzoli/tesi.git markdown/
 
 ## Setta variabili e percorsi
-
+src=$PWD/"markdown"
 origine=$PWD
 temporanea=$PWD/"tmp"
 dest=$PWD/"Chapters"
 
-##concatena file md con note, uno per uno
+##prepara ambiente
+mkdir -p ${src}
 mkdir -p ${temporanea}
 mkdir -p ${dest}
 
-cd ${origine}/"markdown"
+##scarica file sorgente
+cd ${src}
+
+curl ${benenati}
+curl ${cap1}
+curl ${cap2}
+curl ${cap3}
+curl ${cap4}
+curl ${cap5}
+curl ${cap6}
+curl ${note}
+
+##concatena md
+
 
 for file in Chapter*
 do
@@ -57,6 +71,7 @@ git config --global user.email "marco@rizzoli.me.uk"
 git config --global user.name "Marco Rizzoli"
 
 git remote set-url origin https://mrizzoli:${GH_TOKEN}@github.com/mrizzoli/tesi.git
+git checkout -b pdf
 git add *.pdf
 git commit -m "update pdf"
-git push origin master
+git push origin pdf
