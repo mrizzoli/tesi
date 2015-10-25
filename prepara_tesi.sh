@@ -74,8 +74,13 @@ git config --global user.email "marco@rizzoli.me.uk"
 git config --global user.name "Marco Rizzoli"
 
 git remote set-url origin https://mrizzoli:${GH_TOKEN}@github.com/mrizzoli/tesi.git
-git checkout -b pdf
-git pull origin pdf
+#git checkout -b pdf
+#git pull origin pdf
+
+git checkout origin master
+git pull origin master
+
+
 git add *.pdf
 git commit -m "update pdf"
 git push origin pdf
