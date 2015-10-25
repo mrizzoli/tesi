@@ -77,7 +77,7 @@ git remote set-url origin https://mrizzoli:${GH_TOKEN}@github.com/mrizzoli/tesi.
 #git checkout -b pdf
 #git pull origin pdf
 
-git checkout origin master
+git checkout 
 git pull origin master
 
 
