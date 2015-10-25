@@ -65,6 +65,8 @@ done
 ##xelatex
 
 cd ${origine}
+
+xelatex template_tesi.tex
 bibtex template_tesi
 xelatex template_tesi.tex
 
