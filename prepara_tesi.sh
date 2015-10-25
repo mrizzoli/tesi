@@ -25,14 +25,14 @@ mkdir -p ${dest}
 ##scarica file sorgente
 cd ${src}
 
-curl ${benenati}
-curl ${cap1}
-curl ${cap2}
-curl ${cap3}
-curl ${cap4}
-curl ${cap5}
-curl ${cap6}
-curl ${note}
+wget -O benenati.bib ${benenati}
+wget -O Chapter1.md ${cap1}
+wget -O Chapter2.md ${cap2}
+wget -O Chapter3.md ${cap3}
+wget -O Chapter4.md ${cap4}
+wget -O Chapter5.md ${cap5}
+wget -O Chapter6.md ${cap6}
+wget -O note.md ${note}
 
 ##concatena md
 
