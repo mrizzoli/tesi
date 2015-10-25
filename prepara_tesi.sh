@@ -77,13 +77,14 @@ cd output
 git config --global user.email "marco@rizzoli.me.uk"
 git config --global user.name "Marco Rizzoli"
 
+git checkout -b tmp
 git add *.pdf
 git commit -m "update pdf"
-git push origin master
+git push origin tmp
 
 
 #git remote set-url origin https://mrizzoli:${GH_TOKEN}@github.com/mrizzoli/tesi.git
 #git checkout -b pdf
 #git pull origin pdf
-#git checkout 
+#git checkout
 #git pull origin master
