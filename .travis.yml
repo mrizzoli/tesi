@@ -9,9 +9,6 @@ before_install:
   - sudo apt-get update -q
   - sudo apt-get install pandoc pandoc-citeproc texlive-xetex -y
 
-install:
-  - travis_retry bundle install
-
 script:
   #- bundle exec rake site:deploy --quiet
   - ./prepara_tesi.sh
