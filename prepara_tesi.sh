@@ -83,4 +83,4 @@ git pull origin master
 
 git add *.pdf
 git commit -m "update pdf"
-git push origin pdf
+git push origin master
