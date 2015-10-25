@@ -25,7 +25,7 @@ mkdir -p ${dest}
 ##scarica file sorgente
 cd ${src}
 
-wget -O benenati.bib ${benenati}
+wget -O benenati2.bib ${benenati}
 wget -O Chapter1.md ${cap1}
 wget -O Chapter2.md ${cap2}
 wget -O Chapter3.md ${cap3}
@@ -67,7 +67,7 @@ done
 cd ${origine}
 
 xelatex template_tesi.tex
-bibtex template_tesi
+biber template_tesi
 xelatex template_tesi.tex
 
 git config --global user.email "marco@rizzoli.me.uk"
