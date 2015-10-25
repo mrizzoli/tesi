@@ -1,0 +1,21 @@
+language: ruby
+#cache: bundler
+branches:
+    only:
+          - master
+
+before_install:
+  - sudo add-apt-repository ppa:marutter/c2d4u -y
+  - sudo apt-get update -q
+  - sudo apt-get install pandoc pandoc-citeproc xelatex -y
+
+install:
+  - travis_retry bundle install
+
+script:
+  #- bundle exec rake site:deploy --quiet
+  - ./prepara_tesi.sh
+  
+env:
+  global:
+    - secure: 
