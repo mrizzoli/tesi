@@ -1,19 +1,14 @@
 language: ruby
-#cache: bundler
 branches:
-    only:
-          - master
-
+  only:
+  - master
 before_install:
-  - sudo add-apt-repository ppa:marutter/c2d4u -y
-  - sudo apt-get update -q
-  - sudo apt-get install pandoc pandoc-citeproc texlive-xetex texlive-latex3 texlive-latex-extra texlive-bibtex-extra biblatex -y
-
+- sudo add-apt-repository ppa:marutter/c2d4u -y
+- sudo apt-get update -q
+- sudo apt-get install pandoc pandoc-citeproc texlive-xetex texlive-latex3 texlive-latex-extra
+  texlive-bibtex-extra biblatex -y
 script:
-  #- bundle exec rake site:deploy --quiet
-  - ./prepara_tesi.sh
-  
+- "./prepara_tesi.sh"
 env:
   global:
-    - secure: hkMBU1M3g86rDj/sDeMQfn8F/2pG++uDmEp4DaVfk47jJ2dtn7oKRWNXJBXsl8zFrxblM4GSlzZMAD8hALrDAZ5Yp7tcRXPF5upx7GfE7OJq4sWbOvaQQZS4ZyKDDd4pl3Ik6cQYQzAgMxRY4D5vTFRBFWTa7+E3F8Ps4Lsc6sgS3utadvP2E0YJCLosvHjS7N85OaylK0lZflgHKIXULRRBgz0Swz+NBDb0VqbqXwiEE1uoZv4fLVb++5M6S0Hwc5yYr5Rc9Ti7M+k+GghWpS61JOuEpvd6wHnf+nUQQhX155eOmAByiJV7dva4/44fzfy8v4EYVjfvRMgCG8jLTEzWQhhLu7wrc8zNwpa3VX5qc2txRGdvQe6UDSYCsf9cOsM7Sw1sh8GbwUOTeBv86qG4QiWuXteeH9lTTFwk58Ea3BGvi0/XW413z92jcmXiHv5qJizIsjlbNjygPPfdXLG0WACy3wzBauS45OxI0YzX+JEO20LLorIIoUagykm7Q7eFqmSKu1g/DJeswIHZ56k1OCoWFDgEZUp0xK19ElaSVRtNmwUOL+JmLu6NJHkWpmQ6t9U7ECHyhsq8jqFnYJ1SEhMlEXPp2s27GUX+pyb61Hw0O4+3gmcrdZU//PjoTzwNF+JzjcrCzcITluhpUdSf8kkrijUOH78JH5GNPA8=
-
+    secure: lBk7SRgEHXDumpPlIQMRMcb5/jRYMevpV2O5ZEKm3DE2B6VboEP6m0dW57bOufJy9x3XvUgPtz0tM7ivPWvly1+6hofmPxvvo8Zd/mqAas94MncXc1FMJbap27xZLJpZKS/YFsO/qr7QfJXVDQu1SKwapQfXAnbxM1Uwe2A+1B00iw1JSyYIPYlT6HrmTfw0GAS65q9XpmltjpbTbGA7TQdoE9LRmAN+9a7EIMcbwDmUpkA/uX/0neyjD+DGkBY8ProwiujYY1jmr8usEQ+avP/hMR8hX4QzzlNY1utoaJTeJ2Viu9sHAmjim5+o5Alzgme72gVDrd6So+PNDvwG17GOVd64edCZZD9CZo/uLo7FJ4bcR7eSJ5MXT6gfC30rIgLE3h9zA6RLxnI5ikWVFpgTTnYVJnEUOjznUrLka1wTzTX16UZuvkO8fljuV8vXyYvEf7d/CajQVHsOyTGmeF5dSjo0M0aQVBgsv0ejNi4RcWOxS2iZYkpHnfpUTjPtNqz2IqpeCCvrTp9GiuhvDQoUEKzbBI82vnm82hympKossHT2X3itryhaY29Cxg/R8ICtP9ICJRuhjtawfrp73eA40u4Cr22nnmPyutVHzLT8dO2h5bD37JL2fN4gU9D1uPVgB5rGv9dK5ann3FEAhxhVQexom/F9wxkOBdDUoWQ=
