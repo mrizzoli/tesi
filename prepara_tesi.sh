@@ -25,7 +25,7 @@ mkdir -p ${dest}
 ##scarica file sorgente
 cd ${src}
 
-wget -O benenati2.bib ${benenati}
+wget -O benenati.bib ${benenati}
 wget -O Chapter1.md ${cap1}
 wget -O Chapter2.md ${cap2}
 wget -O Chapter3.md ${cap3}
