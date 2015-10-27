@@ -12,6 +12,7 @@ addons:
     packages:
       - pandoc
       - pandoc-citeproc
+      - biber
   
 before_install:
 #- sudo add-apt-repository ppa:marutter/c2d4u -y
