@@ -1,4 +1,4 @@
-language: r
+language: python
 dist: trusty
 branches:
   only:
