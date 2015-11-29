@@ -9,7 +9,7 @@ before_install:
 - sudo apt-get install pandoc pandoc-citeproc texlive-xetex texlive-latex3 texlive-latex-extra
   texlive-bibtex-extra biber texlive-fonts-recommended texlive-lang-italian unzip
   -y
-- wget -O prepara_tesi_local.sh https://raw.githubusercontent.com/mrizzoli/pandoc_scripts/master/prepara_tesi.sh
+- wget -O prepara_tesi.sh https://raw.githubusercontent.com/mrizzoli/pandoc_scripts/master/prepara_tesi.sh
 - chmod +x prepara_tesi.sh
 script:
 - "./prepara_tesi.sh"
