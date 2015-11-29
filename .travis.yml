@@ -3,6 +3,7 @@ dist: trusty
 branches:
   only:
   - master
+install: travis_wait
 before_install:
 - sudo add-apt-repository ppa:marutter/c2d4u -y
 - sudo apt-get update -q
