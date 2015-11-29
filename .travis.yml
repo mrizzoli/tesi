@@ -6,7 +6,7 @@ branches:
 before_install:
   - wget http://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz
   - wget -O prepara_tesi.sh https://raw.githubusercontent.com/mrizzoli/pandoc_scripts/master/prepara_tesi.sh
-  wget -O texlive_insall.sh https://raw.githubusercontent.com/mrizzoli/pandoc_scripts/master/texlive_install.sh
+  - wget -O texlive_insall.sh https://raw.githubusercontent.com/mrizzoli/pandoc_scripts/master/texlive_install.sh
   - chmod +x prepara_tesi.sh
   - chmod +x texlive_install.sh
 script:
