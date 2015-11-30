@@ -2,12 +2,12 @@
 # It will NOT be updated and reflects only the
 # installation profile at installation time.
 selected_scheme scheme-custom
-TEXDIR /home/mrizzoli/bin/texlive/2015
+TEXDIR ~/bin/texlive/2015
 TEXMFCONFIG ~/.texlive2015/texmf-config
 TEXMFHOME ~/texmf
-TEXMFLOCAL /home/mrizzoli/bin/texlive/texmf-local
-TEXMFSYSCONFIG /home/mrizzoli/bin/texlive/2015/texmf-config
-TEXMFSYSVAR /home/mrizzoli/bin/texlive/2015/texmf-var
+TEXMFLOCAL ~/bin/texlive/texmf-local
+TEXMFSYSCONFIG ~/bin/texlive/2015/texmf-config
+TEXMFSYSVAR ~/bin/texlive/2015/texmf-var
 TEXMFVAR ~/.texlive2015/texmf-var
 binary_x86_64-linux 1
 collection-basic 1
