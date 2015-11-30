@@ -5,8 +5,6 @@ branches:
   - master
 addons:
   apt:
-    sources:
-    - debian-sid
     packages:
     - pandoc
     - pandoc-citeproc
