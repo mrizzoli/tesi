@@ -3,6 +3,11 @@ dist: trusty
 branches:
   only:
   - master
+addons:
+  apt:
+    packages:
+    - pandoc
+    - pandoc-citeproc
 before_install:
   - wget http://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz
   - wget -O prepara_tesi.sh https://raw.githubusercontent.com/mrizzoli/pandoc_scripts/master/prepara_tesi.sh
