@@ -1,18 +1,22 @@
 language: python
-dist: trusty
+dist: precise
 branches:
   only:
   - master
+addons:
+  apt:
+    packages:
+    - pandoc
+    - pandoc-citeproc
 before_install:
-- sudo add-apt-repository ppa:marutter/c2d4u -y
-- sudo apt-get update -q
-- sudo apt-get install pandoc pandoc-citeproc texlive-xetex texlive-latex3 texlive-latex-extra
-  texlive-bibtex-extra biber texlive-fonts-recommended texlive-lang-italian unzip
-  -y
-- wget -O prepara_tesi.sh https://raw.githubusercontent.com/mrizzoli/pandoc_scripts/master/prepara_tesi.sh
-- chmod +x prepara_tesi.sh
+  - wget http://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz
+  - wget -O prepara_tesi.sh https://raw.githubusercontent.com/mrizzoli/pandoc_scripts/master/prepara_tesi.sh
+  - wget -O texlive_install.sh https://raw.githubusercontent.com/mrizzoli/pandoc_scripts/master/texlive_install.sh
+  - chmod +x prepara_tesi.sh
+  - chmod +x texlive_install.sh
 script:
-- "./prepara_tesi.sh"
+  - "./texlive_install.sh"
+  - "./prepara_tesi.sh"
 env:
   global:
   - secure: lBk7SRgEHXDumpPlIQMRMcb5/jRYMevpV2O5ZEKm3DE2B6VboEP6m0dW57bOufJy9x3XvUgPtz0tM7ivPWvly1+6hofmPxvvo8Zd/mqAas94MncXc1FMJbap27xZLJpZKS/YFsO/qr7QfJXVDQu1SKwapQfXAnbxM1Uwe2A+1B00iw1JSyYIPYlT6HrmTfw0GAS65q9XpmltjpbTbGA7TQdoE9LRmAN+9a7EIMcbwDmUpkA/uX/0neyjD+DGkBY8ProwiujYY1jmr8usEQ+avP/hMR8hX4QzzlNY1utoaJTeJ2Viu9sHAmjim5+o5Alzgme72gVDrd6So+PNDvwG17GOVd64edCZZD9CZo/uLo7FJ4bcR7eSJ5MXT6gfC30rIgLE3h9zA6RLxnI5ikWVFpgTTnYVJnEUOjznUrLka1wTzTX16UZuvkO8fljuV8vXyYvEf7d/CajQVHsOyTGmeF5dSjo0M0aQVBgsv0ejNi4RcWOxS2iZYkpHnfpUTjPtNqz2IqpeCCvrTp9GiuhvDQoUEKzbBI82vnm82hympKossHT2X3itryhaY29Cxg/R8ICtP9ICJRuhjtawfrp73eA40u4Cr22nnmPyutVHzLT8dO2h5bD37JL2fN4gU9D1uPVgB5rGv9dK5ann3FEAhxhVQexom/F9wxkOBdDUoWQ=
