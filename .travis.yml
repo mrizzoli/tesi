@@ -3,6 +3,13 @@ dist: trusty
 branches:
   only:
   - master
+addons:
+  apt:
+    sources:
+    - debian-sid
+    packages:
+    - pandoc
+    - pandoc-citeproc
 before_install:
 - wget -O prepara_tesi.sh https://raw.githubusercontent.com/mrizzoli/pandoc_scripts/master/prepara_tesi.sh
 - chmod +x prepara_tesi.sh
