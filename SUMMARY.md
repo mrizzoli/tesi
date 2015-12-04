@@ -1,4 +1,0 @@
-# Summary
-
-* Capitolo1
-
