@@ -1,7 +1,0 @@
-body * {visibility: hidden;}
-#article * {
-    visibility: visible;
-    text-align: justify;
-    padding: 10px auto;
-    width: 75em;
-}
