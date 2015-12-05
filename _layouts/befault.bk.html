@@ -1,0 +1,42 @@
+---
+layout: default
+---
+<div class="span8">
+  <p class="text-info">
+    <table class="table table-condensed">
+      <tr class="info">
+        <td><small><i class="octicon octicon-jump-left"></i>&nbsp;<a href="/blog.html">Back to Essay List</a></small></td>
+        <td><small><i class="octicon octicon-calendar"></i>&nbsp;Modified: {{ page.path | prepend:'_posts/' | git_modified | date_to_string }}</small></td>
+        <td><small><i class="octicon octicon-repo">&nbsp;</i>&nbsp;{% greycite_bib_link type: bib %}</small></td>
+        <td><small><i class="octicon octicon-repo">&nbsp;</i>&nbsp;{% greycite_bib_link type: ris %}</small></td>
+        <td><small><a href="javascript:window.print()"><i class="octicon octicon-file-text"></i>&nbsp;Print</a></small></td>
+      </tr>
+    </table>
+  </p>
+
+	
+  {{ content }}  
+
+
+
+  <div class="well well-small">
+    <table class="table table-condensed">
+      <tr>
+        <td><small><i class="octicon octicon-jump-left"></i>&nbsp;<a href="/blog.html">Back to Essay List</a></small></td>
+        <td><small><i class="octicon octicon-calendar"></i>&nbsp;Modified: {{ page.path | prepend:'_posts/' | git_modified | date_to_string }}</small></td>
+        <td><small><i class="octicon octicon-repo">&nbsp;</i>&nbsp;{% greycite_bib_link type: bib %}</small></td>
+        <td><small><i class="octicon octicon-repo">&nbsp;</i>&nbsp;{% greycite_bib_link type: ris %}</small></td>
+        <td><small><a href="javascript:window.print()"><i class="octicon octicon-file-text"></i>&nbsp;Print</a></small></td>
+      </tr>
+    </table>
+
+    <p class="text-info"><i class="octicon octicon-bookmark"></i>&nbsp;Tags</p>
+    <ul>
+      {% for tag in page.tags %}
+      <li><a href='/tag/{{ tag | url_encode }}.html'>{{ tag }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+
+</div>
+
